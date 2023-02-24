@@ -1,13 +1,18 @@
-<h1>Hello World!</h1>
+{% extends 'base.html' %}
 
-<p>This is my first webpage!!</p>
-<p>{{ stuff|safe }}</p>
+{% block content %}
 
-<h3>Favourite Pizza:</h3>
-{% for topping in fav_pizza %}
-    {{ topping }}<br/>
-{% endfor %}
+    <h1>Hello World!</h1>
 
-<br><br>
-{{ fav_pizza.2|reverse }}
+    <p>This is my first webpage!!</p>
+    <p>{{ stuff|safe }}</p>
 
+    <h3>Favourite Pizza:</h3>
+    {% for topping in fav_pizza %}
+        {{ topping }}<br/>
+    {% endfor %}
+
+    <br><br>
+    {{ fav_pizza.2|reverse }}
+
+{% endblock %}
